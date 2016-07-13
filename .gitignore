@@ -7,5 +7,5 @@
 /pkg/
 /spec/reports/
 /tmp/
-/bower_components/
+/milligram_source/
 .DS_Store
