@@ -1,7 +1,8 @@
 # Milligram
 
-[Milligram](https://milligram.github.io/) is a minimalist CSS framework. This gem packages the framework's assets for drop-in use in Rails applications.
+[![Gem Version](https://badge.fury.io/rb/milligram.svg)](https://badge.fury.io/rb/milligram)
 
+[Milligram](https://milligram.github.io/) is a minimalist CSS framework. This gem packages the framework's assets for drop-in use in Rails applications.
 
 ## Installation
 
