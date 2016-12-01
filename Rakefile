@@ -10,10 +10,10 @@ namespace :milligram do
   namespace :assets do
     desc 'Update Milligram\'s assets.'
     task update: :clean do
-      version = Milligram::VERSION.sub(/.\d+$/, '')
+      version = ARGV[1] || "v#{Milligram::VERSION.sub(/.\d+$/, '')}"
 
       sh 'git clone git@github.com:milligram/milligram.git milligram_source'
-      sh "cd milligram_source && git checkout tags/v#{version}"
+      sh "cd milligram_source && git checkout tags/#{version}"
       sh 'cp -R milligram_source/src/ vendor/assets/stylesheets/milligram/'
 
       File.open('vendor/assets/stylesheets/milligram.scss', 'w') do |f|
