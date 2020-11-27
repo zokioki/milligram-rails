@@ -1,10 +1,12 @@
-require "bundler/gem_tasks"
-require "rspec/core/rake_task"
-require "milligram/version"
+# frozen_string_literal: true
+
+require 'bundler/gem_tasks'
+require 'rspec/core/rake_task'
+require 'milligram/version'
 
 RSpec::Core::RakeTask.new(:spec)
 
-task :default => :spec
+task default: :spec
 
 namespace :milligram do
   namespace :assets do
@@ -20,7 +22,9 @@ namespace :milligram do
         f.write('@import "milligram/milligram.sass";')
       end
 
-      puts "\n=*=*=*=*=*=*=*=*=*=*\n=* ASSETS UPDATED! *=\n=*=*=*=*=*=*=*=*=*=*\n"
+      puts "\n================================"
+      puts "* ASSETS UPDATED to #{version}! 🔧 *"
+      puts "================================"
     end
 
     desc 'Remove previous Milligram assets.'
